@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.main_box{
+    background: url("camera.jpg");
+    height: 100vh; 
+    /* vh means viewport jisase hamari puri pic all over page me aa jayengi */
+    background-size:cover
+    /* background size se hamari overall image clearly cover hoti hai pure page me; */
+
+}
+.btn_one i{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    /* font weight se chize bold hoti hai */
+    position: absolute;
+    /* position absolute mtlb parent ke hisab se property apply hongi but main box joki parent hai uski koi position nhi hai toh hum overall set karenge position ko */
+    left: 16px;
+    line-height: 60px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.sidebar_menu{
+    position: fixed;
+    left: -300px;
+    /* -350 pxlene se hamara menu hame dikhenga nhi vo pure left side me chale jayenga and ye bahut imp hai  */
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(255, 255, 255,0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255,0.5);
+  transition: all 0.2s linear;
+  /* ye linear karne se linearly sidebar menu hame dikhenga jaise hi hum btn 1 ko hobver karege vaise hi */
+}
+.sidebar_menu .logo{
+    position: absolute;
+    width: 100%;
+    line-height: 60px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255,0.5);
+    height: 60px;
+}
+.sidebar_menu .logo a{
+    position: absolute;
+    left: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+.sidebar_menu .btn_two i{
+  color:grey;
+  font-size: 25px;
+  line-height: 60px;
+  position: absolute;
+  left: 230px;
+  /* opacity: 0; */
+  cursor: pointer;
+  /* pointr se hamar hand wala cursor aayenga jaise hum x par jayenge vaise hi that means button 2 pe jate hi hand symbol aayenga */
+  transition: all 0.3s linear;
+
+}
+.sidebar_menu .menu{
+    position: absolute;
+    width: 100%;
+    top: 80px;
+}
+.sidebar_menu .menu li{
+    margin-top: 6px;
+    padding: 10px 20px;
+    /* left right|top  bottom */
+
+}
+/* icons and link ko style kiye hai */
+.sidebar_menu .menu i,a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+.sidebar_menu .menu i{
+    padding-right: 8px;
+    /* isase logo and number ke bichme gap aayengi */
+
+}
+.sidebar_menu .social_media{
+    /* isase hamara instagram ka logo ko style denge */
+    
+    position: absolute;
+    /* absolute mans parent ke relative left set honga toh parent sidebar menu hai toh uske hisabse 25% left jayengs  */
+    left: 25%;
+    bottom: 50px;
+    /* bottom se diye toh hamara logo jo upar dikhra tha vo niche bottom me aa jayenga */
+}
+/* if we want to control our icons */
+.sidebar_menu .social_media i{
+    color: white;
+    opacity: 0.5;
+    /* yaha opocity lene se white thoda halka ho gya */
+    padding: 0 5px;
+    /* padding se logo ke bichme distance aa jayenga */
+}
+
+/* ab humko filal checkbox nhi chahiye to hum usko remove karenge */
+#check{
+display: none;
+/* none karne se hmare screen se checkbox remove ho jayenga and checkbox ke liye jitni bhi reserved space thi vo bhi remove ho jayengi */
+}
+.sidebar_menu .menu li:hover{
+    /* isase hum hamare list item ke upar hover karenge and box shadow dena chahte hai */
+    box-shadow: 0 0 6px rgba(255, 255, 255,0.5);
+}
+.btn_one i:hover{
+    font-size: 40px;
+}
+.btn_two i:hover{
+    font-size: 40px;
+}
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    /* opacity 1 karne se hamara logo dark/bold dikhenge */
+    transform: scale(1.1);
+    /* transform se kya hora hai ki jaise hi hum hover kare hai logo par vaise hi uska size 1.1 se badara hai means size changes me transform hora hai */
+}
+#check:checked ~ .sidebar_menu{
+    /* ~= denote a sibling and checkbox ke sibling sidebar_menu and btn_one hai but hum chagte hai ki agar hum btn_1 ko hovere kare toh hame side bar menu dikhe toh hum ye style laaggyenge */
+    left: 0;
+    /* iska mtln ye hai ki hame pata hai jab hum btn_1 ko hover karte hi toh chechbox check ho jata hai toh jaise hai hum btn_1ko hover karenge vaise hi hamara left 
+    se disteance 0 ho jayenga and jaise left=0 hua vaise hi hame side bar menu dikhne lagenga */
+}
+.container{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    height:190px;
+    width: 170px;
+    margin-left: 200px;
+  
+  
+}
+h1{
+    margin-left: 200px;
+   
+}
